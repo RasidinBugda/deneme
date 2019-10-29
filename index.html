@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kodlayabilirsin</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="images/kodlogot.png" />
+    <link href="css/all.min.css" rel="stylesheet">
+    <link href="css/fontawesome.min.css" rel="stylesheet">
+    <!-- Yazı Tipleri Başlangıcı -->
+    <link href="https://fonts.googleapis.com/css?family=Teko&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arimo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
+    <!-- 3901126179 -->
+    <style>
+    /* Profil Kartı */
+    .profilecard {
+        width: 300px;
+        height: 430px;
+        background: white;
+        border: 2px solid #eae9e9;
+        border-radius: 6px;
+        position: absolute;
+        top: 100px;
+        right: 13px;
+        overflow: hidden;
+        display: inline-block;
+    }
+    .ustbolge {
+        height: 150px;
+        background: #6d0c74;
+    }
+    .profileimage {
+        background: white;
+        width: 100px;
+        height: 100px;
+        border-radius: 35%;
+        padding: 5px;
+        transform: translateY(90px);
+    }
+    .profileimage img{
+        width: 100px;
+        height: 100px;
+        border-radius: 35%;
+    }
+    .altbolge {
+        height: 280px;
+        background: white;
+        padding: 20px;
+        padding-top: 40px;
+        text-align: center;
+        font-family: 'Merriweather', serif;
+    }
+    .altbolge h3, h4 {
+        box-sizing: border-box;
+        font-weight: lighter;
+    }
+    .altbolge h4 {
+        color: #eb7070;
+        font-weight: bold;
+        font-size: 13px;
+    }
+    .altbolge h3 {
+        color: #160f30;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    .altbolge p {
+        color: darkgrey;
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    .profilebtn {
+        padding: 10px 15px;
+        border-radius: 30%;
+        background: #5eb7b7;
+        border: 0px;
+        font-size: 25px;
+        transition: 0.3s;
+        color: aliceblue;
+        margin: 10px;
+    }
+    .fbtn {
+        padding: 10px 18px;
+    }
+    .profilebtn:hover {
+        background: aliceblue;
+        color: #5eb7b7;
+    }
+    /* Profil Kartı */
+    nav {
+        width: 944px;
+        height: auto;
+        left: 45px;
+        top: 100px;
+        position: relative;
+    }
+    nav h1 {
+        display: inline-block;
+        font-family: 'Roboto Mono', monospace;
+        color: #293462;
+        font-size: 22px;
+    }
+    .duyuru {
+        width: 941px;
+        height: 312px;
+        background: #e6f8f9;
+        border: 2px solid #eae9e9;
+        border-radius: 3px;
+        overflow: hidden;
+    }
+    .duyuru h2 {
+        padding-left: 13px;
+        color: #293462;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 21px;
+    }
+    .duyuru p {
+        padding-left: 13px;
+        font-family: 'Merriweather', serif;
+        color: #3c4245;
+        font-size: 16px;
+    }
+    .webders {
+        width: 941px;
+        height: 170px;
+        background: white;
+        transform: translate(0px, 0px);
+        border: 2px solid #eae9e9;
+        border-radius: 3px;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+    .twoand {
+        background: white;
+        border: 2px solid #eae9e9;
+        margin-top: 10px;
+    }
+    .webders h2 {
+        font-family: 'Lato', sans-serif;
+        color: #211717;
+    }
+    .webders p {
+        font-family: 'Merriweather', serif;
+        color: #3c4245;
+    }
+    .dersimage {
+        width: 150px;
+        display: inline-block;
+        float: left;
+        padding: 10px;
+    }
+    .derslink {
+        text-decoration: none;
+    }
+    .webders:hover {
+        background: #f35f5f;
+    }
+    .reklam1 {
+        width: 300px;
+        height: 300px;
+        border: 2px solid #eae9e9;
+        position: absolute;
+        top: 540px;
+        right: 13px;
+        overflow: hidden;
+    }
+    .body {
+        position: relative;
+        width: auto;
+        height: 1300px;
+    }
+    .hr1 {
+        height: 3px;
+        background: #3c4245;
+        margin-top: -10px;
+    }
+    @media (max-width: 1330px) {
+        .webders {
+            width: 791px;
+        }
+        .duyuru {
+            width: 791px;
+        }
+        nav {
+            width: 794px;
+        }
+    }
+    @media (max-width: 1180px) {
+        .webders {
+            width: 641px;
+        }
+        .duyuru {
+            width: 641px;
+        }
+        nav {
+            width: 644px;
+        }
+    }
+    @media (max-width: 1030px) {
+        .webders {
+            width: 591px;
+        }
+        .duyuru {
+            width: 591px;
+        }
+        nav {
+            width: 594px;
+        }
+    }
+    @media (max-width: 980px) {
+        .webders {
+            width: 491px;
+        }
+        .duyuru {
+            width: 491px;
+        }
+        .duyuru p {
+            font-size: 13px;
+        }
+        nav {
+            width: 494px;
+        }
+    }
+    @media (max-width: 880px) {
+        .webders {
+            width: 840px;
+        }
+        .duyuru {
+            width: 840px;
+        }
+        .duyuru p {
+            font-size: 16px;
+        }
+        nav {
+            width: 844px;
+            left: 8px;
+            top: 854px;
+        }
+        .profilecard {
+            width: 840px;
+            right: 12px;
+        }
+        .reklam1 {
+            right: 12px;
+        }
+        .body {
+            height: 1650px;
+        }
+    }
+    @media (max-width: 823px) {
+        .webders {
+            width: 793px;
+        }
+        .duyuru {
+            width: 793px;
+        }
+        .duyuru p {
+            font-size: 16px;
+        }
+        nav {
+            width: 797px;
+            left: 15px;
+            top: 854px;
+        }
+        .profilecard {
+            width: 793px;
+            right: 11px;
+        }
+        .reklam1 {
+            right: 11px;
+        }
+        .body {
+            height: 1650px;
+        }
+    }
+    @media (max-width: 812px) {
+        .webders {
+            width: 782px;
+        }
+        .duyuru {
+            width: 782px;
+        }
+        .duyuru p {
+            font-size: 16px;
+        }
+        nav {
+            width: 784px;
+            left: 15px;
+            top: 854px;
+        }
+        .profilecard {
+            width: 782px;
+            right: 8px;
+        }
+        .reklam1 {
+            right: 8px;
+        }
+        .body {
+            height: 1650px;
+        }
+    }
+    @media (max-width: 768px) {
+        .webders {
+            width: 738px;
+        }
+        .duyuru {
+            width: 738px;
+        }
+        .duyuru p {
+            font-size: 16px;
+        }
+        nav {
+            width: 742px;
+            left: 10px;
+            top: 854px;
+        }
+        .profilecard {
+            width: 738px;
+            right: 15px;
+        }
+        .reklam1 {
+            right: 15px;
+        }
+        .body {
+            height: 1650px;
+        }
+    }
+    @media (max-width: 736px) {
+        .webders {
+            width: 706px;
+        }
+        .webders p{
+            font-size: 16px;
+        } 
+        .duyuru {
+            width: 706px;
+        }
+        .duyuru p {
+            font-size: 16px;
+        }
+        nav {
+            width: 710px;
+            left: 15px;
+            top: 854px;
+        }
+        .profilecard {
+            width: 706px;
+            right: 8px;
+        }
+        .reklam1 {
+            right: 8px;
+        }
+        .body {
+            height: 1650px;
+        }
+    }
+    @media (max-width: 667px) {
+        .webders {
+            width: 637px;
+        }
+        .webders p{
+            font-size: 14px;
+        } 
+        .duyuru {
+            width: 637px;
+        }
+        .duyuru p {
+            font-size: 14px;
+        }
+        nav {
+            width: 641px;
+            left: 13px;
+            top: 854px;
+        }
+        .profilecard {
+            width: 637px;
+            right: 11px;
+        }
+        .reklam1 {
+            right: 11px;
+        }
+        .body {
+            height: 1650px;
+        }
+    }
+    @media (max-width: 640px) {
+        .webders {
+            width: 610px;
+        }
+        .webders p{
+            font-size: 14px;
+        } 
+        .duyuru {
+            width: 610px;
+        }
+        .duyuru p {
+            font-size: 14px;
+        }
+        nav {
+            width: 614px;
+            left: 13px;
+            top: 854px;
+        }
+        .profilecard {
+            width: 610px;
+            right: 11px;
+        }
+        .reklam1 {
+            right: 11px;
+        }
+        .body {
+            height: 1650px;
+        }
+    }
+    @media (max-width: 568px) {
+        .webders {
+            width: 538px;
+        }
+        .webders p{
+            font-size: 14px;
+        } 
+        .duyuru {
+            width: 538px;
+        }
+        .duyuru p {
+            font-size: 14px;
+        }
+        nav {
+            width: 542px;
+            left: 13px;
+            top: 854px;
+        }
+        .profilecard {
+            width: 538px;
+            right: 12px;
+        }
+        .reklam1 {
+            right: 12px;
+        }
+        .body {
+            height: 1650px;
+        }
+    }
+    @media (max-width: 414px) {
+        .webders {
+            width: 384px;
+        }
+        .webders p{
+            font-size: 13px;
+        } 
+        .duyuru {
+            width: 384px;
+        }
+        .duyuru p {
+            font-size: 13px;
+        }
+        nav {
+            width: 388px;
+            left: 15px;
+            top: 854px;
+        }
+        .profilecard {
+            width: 384px;
+            right: 8px;
+        }
+        .reklam1 {
+            right: 8px;
+        }
+        .body {
+            height: 1650px;
+        }
+    }
+    @media (max-width: 414px) {
+        .webders {
+            width: 384px;
+        }
+        .webders p{
+            font-size: 13px;
+        } 
+        .duyuru {
+            width: 384px;
+        }
+        .duyuru p {
+            font-size: 13px;
+        }
+        nav {
+            width: 388px;
+            left: 12px;
+            top: 854px;
+        }
+        .profilecard {
+            width: 384px;
+            right: 11px;
+        }
+        .reklam1 {
+            right: 11px;
+        }
+        .body {
+            height: 1650px;
+        }
+    }
+    @media (max-width: 375px) {
+        .webders {
+            width: 345px;
+        }
+        .webders p{
+            font-size: 10px;
+        } 
+        .duyuru {
+            width: 345px;
+        }
+        .duyuru p {
+            font-size: 13px;
+        }
+        nav {
+            width: 349px;
+            left: 13px;
+            top: 854px;
+        }
+        .profilecard {
+            width: 345px;
+            right: 11px;
+        }
+        .reklam1 {
+            right: 11px;
+        }
+        .body {
+            height: 1650px;
+        }
+    }
+    @media (max-width: 360px) {
+        .webders {
+            width: 330px;
+        }
+        .webders p{
+            font-size: 10px;
+        } 
+        .webders h2 {
+            font-size: 16px;
+        }
+        .duyuru {
+            width: 330px;
+        }
+        .duyuru p {
+            font-size: 12px;
+        }
+        .duyuru h2 {
+            font-size: 14px;
+        }
+        nav {
+            width: 334px;
+            left: 13px;
+            top: 854px;
+        }
+        .profilecard {
+            width: 330px;
+            right: 12px;
+        }
+        .reklam1 {
+            right: 12px;
+        }
+        .body {
+            height: 1650px;
+        }
+    }
+    @media (max-width: 320px) {
+        .webders {
+            width: 290px;
+        }
+        .webders p{
+            font-size: 10px;
+        } 
+        .webders h2 {
+            font-size: 16px;
+        }
+        .duyuru {
+            width: 290px;
+        }
+        .duyuru p {
+            font-size: 12px;
+        }
+        nav {
+            width: 294px;
+            left: 13px;
+            top: 854px;
+        }
+        .profilecard {
+            width: 290px;
+            right: 11px;
+        }
+        .reklam1 {
+            right: 8px;
+        }
+        .body {
+            height: 1650px;
+        }
+    }
+</style>
+</head>
+<body>
+    <header>
+        <img src="images/kodlogot.png" width="75" class="logoimg" />
+        <a href="index.html"><button class="headerbuton">ANASAYFA</button></a>
+        <a href="about.html"><button class="headerbuton">HAKKIMIZDA</button></a>
+        <button class="headerbuton">DUYURULAR</button>
+    </header>
+    <div class="body">
+    <div class="yannav">
+        <div class="profilecard">
+            <div class="ustbolge">
+                <center><div class="profileimage"><img src="images/adminimage.jpg" width="50"></div></center>
+            </div>
+            <div class="altbolge">
+                <div>
+                    <h3>Raşidin Buğda</h3>
+                    <h4>Web Tasarımcısı</h4>
+                </div>
+                <div>
+                    <p>Bu siteyi kodlayan ve tasarlayan kişi. Takip edebilirsiniz...</p>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/rasidin.bugda" class="profilebtn" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/rasidin.bugda.06" class="profilebtn fbtn" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+</div>
+        <div class="reklam1">
+            <img src="images/Image-Edition-Tools-Screenshot-icon.png" width="300px">
+        </div>
+    </div>
+    <nav>
+        <div class="duyuru">
+            <h2>YENİ DUYURULAR</h2>
+            <p>
+                Öncelikle şunu söylemek istiyoruz ki, her site tamamen mükemmel değildir. Biz elimizden geldiği kadar sizlere <b>web tasarım</b>ı öğretmeye çalıştık. Video ile size daha iyi hizmet sunmak isterdik ama kaynaklarımız kısıtlı olduğundan sizlere ancak yazılı olarak hizmet verebilmekteyiz. Bu sitenin daha iyi yerlere gelmesine katkı sağlayarak size daha iyi hizmetler sunmamıza yardım edebilirsiniz. <br><br>
+                Bu sitenin amacı sizlere <b>HTML</b>, <b>CSS</b> ve <b>JavaScript</b> öğreniminizde katkı sağlamaktır. Siz de bizim gibi web tasarımını kendiniz kodlayarak öğrenmek istiyorsanız bu siteden <b>ücretsiz</b> bir şekilde yararlanabilirsiniz. Size iyi eğlenceler dileriz.
+            </p>
+        </div>
+        <h1>İÇERİKLER</h1>
+        <hr class="hr1">
+        <a href="index.html" class="derslink"><div class="webders">
+                <img src="images/webdersimage.png" class="dersimage">
+                    <h2>Web Tasarımı | 2019</h2>
+                    <p>
+                        HTML, CSS ve JavaScript öğrenmek mi istiyorsun? Buradaki yazıları okuyarak güzel bir başlangıç yapabilirsin.
+                    </p>
+            </div></a>
+        <a href="#" class="derslink"><div class="webders twoand">
+                <img src="images/Image-Edition-Tools-Screenshot-icon.png" class="dersimage">
+                    <h2>Yapım Aşamasında</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis quisquam, accusamus accusantium doloremque ab, adipisci! Ullam, atque! Iste saepe, nulla?
+                    </p>
+            </div></a>
+    </nav>
+    </div>
+    <footer>
+       <div class="footerbaglanti">
+        <a href="#">Hakkımızda</a><br>
+        <a href="#">Duyurular</a><br>
+        <a href="#">SSS</a>
+       </div>
+       <div class="footersm">
+           <a href="https://www.instagram.com/rasidin.bugda" target="_blank">İnstagram</a><br>
+           <a href="https://www.facebook.com/rasidin.bugda.06" target="_blank">Facebook</a><br>
+           <p>© 2019 Tüm Hakları Saklıdır.</p>
+       </div>
+    </footer>
+</body>
+</html>
